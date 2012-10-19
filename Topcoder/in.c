@@ -1,0 +1,11 @@
+10
+.FFF..F...
+FFF...FF.F
+..F.F.F.FF
+FF..F.FFF.
+..FFFFF...
+F....FF...
+.FF.FF..FF
+..F.F.FFF.
+.FF..F.F.F
+F.FFF.FF.F
