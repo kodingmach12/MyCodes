@@ -9,6 +9,9 @@
 # Executable files
 *.exe
 
+# Backup Files (of Editor)
+*.bak
+
 # Document Files
 *.pdf
 *.html
