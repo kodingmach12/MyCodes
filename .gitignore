@@ -6,6 +6,15 @@
 # Compiled Dynamic libraries
 *.so
 
+# Executable files
+*.exe
+
+# Document Files
+*.pdf
+*.html
+*.mhtml
+*.odf
+
 # Compiled Static libraries
 *.lai
 *.la
