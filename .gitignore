@@ -12,6 +12,13 @@
 # Backup Files (of Editor)
 *.bak
 
+# Text Files (Problem Statement)
+*.txt
+
+# Java Files
+.jar
+.jnlp
+
 # Document Files
 *.pdf
 *.html
