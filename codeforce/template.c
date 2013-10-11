@@ -12,18 +12,24 @@
 
 void solver()
 {
-int len=0;
-
-
-
+ long long int m,n,i,a,t=0,prev = 1;
+ scanf("%lld%lld",&n,&m);
+for(i=0;i<m;i++){
+  scanf("%lld",&a);
+  if(a-prev < 0){
+    t+= (n-prev+a);
+  }else{
+      t+= (a-prev);
+  }
+  // printf("%lld %lld %lld\n",prev,a,t);
+  prev = a;
+ }
+ // printf("%lld\n",t);
 }
 
 
 int main()
 {
-int tcases=0;
-scanf("%d",&tcases);
-    while(tcases--)
 	solver();
 return 0;
 }
