@@ -3,8 +3,11 @@
 struct result
 {
     int lis_len;
-    int last_index;};
-struct result lis( int arr[], int n )
+    int last_index;
+};
+
+struct result 
+lis( int arr[], int n )
 {
     struct result res, max;
     max.lis_len = 1;
