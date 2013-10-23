@@ -1,0 +1,12 @@
+[Login]
+username = 12
+password = 12
+
+[Phonebook]
+
+[Auth]
+logindone = http://fullonsms.com/landing_page.php
+loginpage = http://fullonsms.com/login.php
+sms_sent = http://fullonsms.com/MsgSent.php
+sendsms = http://fullonsms.com/home.php
+logincheck = http://fullonsms.com/login.php

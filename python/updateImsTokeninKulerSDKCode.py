@@ -24,8 +24,8 @@ ims_auth_token =  responseJSON['access_token']
 # for key,val in response.iteritems():
 	# print key,val
 
-filepath = '/Users/Navgupta/code/kulerios/Converge/Kuler/Mobile/product/trunk/ios/KulerSDK/KulerSDKSample/Ku_sample.cpp'
-newfilepath = '/Users/Navgupta/code/kulerios/Converge/Kuler/Mobile/product/trunk/ios/KulerSDK/KulerSDKSample/Ku_sample2.cpp'
+filepath = '/Users/Navgupta/code/KulerSDK/KulerSDKSample/KulerSDKSample_ios/KulerSDKSample_ios/Ku_sample.cpp'
+newfilepath = '/Users/Navgupta/code/KulerSDK/KulerSDKSample/KulerSDKSample_ios/KulerSDKSample_ios/Ku_sample2.cpp'
 filehandle = open( filepath)  # defaults to read mode
 newfilehandle = open( newfilepath, 'w')
 for linenumber,line in enumerate(filehandle):
