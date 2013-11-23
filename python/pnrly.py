@@ -9,26 +9,26 @@ print "| Indian Railways' PNR Tracker [PNRly] |"
 print "+--------------------------------------+"
 pnr_number = raw_input("\nEnter PNR Number To Track:  ")
 
-# phone_number = raw_input("\nEnter your [FullOnSMS.com] Phone Number:  ")
-# password = raw_input("\nEnter your [FullOnSMS.com] Password:  ")
+phone_number = raw_input("\nEnter your [FullOnSMS.com] Phone Number:  ")
+password = raw_input("\nEnter your [FullOnSMS.com] Password:  ")
 
-# #send a test sms
-# print "\nInitializing & Verifying SMS functionality...\n"
-# #write sendsms.auth file
-# s = "[Login]\nusername = "+phone_number+"\npassword = "+password+"\n\n[Phonebook]\n\n[Auth]\nlogindone = http://fullonsms.com/landing_page.php\nloginpage = http://fullonsms.com/login.php\nsms_sent = http://fullonsms.com/MsgSent.php\nsendsms = http://fullonsms.com/home.php\nlogincheck = http://fullonsms.com/login.php\n"
-# f = open("sendsms.auth",'w')
-# f.write(s)
-# f.close()
+#send a test sms
+print "\nInitializing & Verifying SMS functionality...\n"
+#write sendsms.auth file
+s = "[Login]\nusername = "+phone_number+"\npassword = "+password+"\n\n[Phonebook]\n\n[Auth]\nlogindone = http://fullonsms.com/landing_page.php\nloginpage = http://fullonsms.com/login.php\nsms_sent = http://fullonsms.com/MsgSent.php\nsendsms = http://fullonsms.com/home.php\nlogincheck = http://fullonsms.com/login.php\n"
+f = open("sendsms.auth",'w')
+f.write(s)
+f.close()
 
-# while True:
-# 	try:
-# 		os.system('./sendsms.py '+phone_number+' "Tracking PNR #'+pnr_number+'" -t ./sendsms.auth')
-# 	except:
-# 		pass
-# 	else:
-# 		break
+while True:
+	try:
+		os.system('./sendsms.py '+phone_number+' "Tracking PNR #'+pnr_number+'" -t ./sendsms.auth')
+	except:
+		pass
+	else:
+		break
 
-#continue
+# continue
 print "\nTracking..."
 
 virgin = True #Flag that tells whether or not a status on the PNR number is already obtained. 
@@ -85,15 +85,15 @@ while True:
 		virgin = False
 		past_status = current_status
 		
-	# if past_status!=current_status:
-	# 	while True:
-	# 		try:
-	# 			os.system('./sendsms.py '+phone_number+' "PNR #'+pnr_number+' [Status Updated]      '+sms_output[:-4]+'" -t ./sendsms.auth')
-	# 		except:
-	# 			pass
-	# 		else:
-	# 			break
-	# 	past_status = current_status
+	if past_status!=current_status:
+		while True:
+			try:
+				os.system('./sendsms.py '+phone_number+' "PNR #'+pnr_number+' [Status Updated]      '+sms_output[:-4]+'" -t ./sendsms.auth')
+			except:
+				pass
+			else:
+				break
+		past_status = current_status
 	print current_status
 		
 	time.sleep(900) #check every 15 minutes
