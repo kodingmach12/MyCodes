@@ -15,9 +15,14 @@
 #include<cstdio>
 #include<cmath>
 using namespace std;
-#define FOR(i,a,b)					for(int i=a;i<b;i++)
-#define REP(i,n)					FOR(i,0,n)
-#define pb						 	push_back
+
+#define reset(a , b) memset(a , b , sizeof(a))
+#define debug(x) cerr << #x << " = " << x << endl;
+#define sqr(x) ((x) * (x))
+
+#define FOR(i,a,b)					 for(int i=a;i<b;i++)
+#define REP(i,n)					   FOR(i,0,n)
+#define pb						 	     push_back
 #define mp						 	make_pair
 #define s(n)						scanf("%d",&n)
 #define sl(n) 						scanf("%lld",&n)
@@ -34,6 +39,7 @@ using namespace std;
 #define miN(a,b)					(a<b?a:b)
 #define DREP(a)						sort(all(a)); a.erase(unique(all(a)),a.end())
 #define INDEX(arr,ind)				lower_bound(all(arr),ind)-arr.begin())
+
 typedef vector<int> VI;
 typedef vector<vector<int> > VVI;
 typedef long long LL;

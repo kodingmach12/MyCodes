@@ -67,8 +67,9 @@
       string name;
       int shot;
       int height;
+      int time;
     };
-    vector<player> in,t1,t2;
+    vector<player> in,t1,t2,p1,p2;
     int n,m,p,res = 0;
 
     void print(){
@@ -84,30 +85,46 @@
       return false;
     }
 
-    void solve(int tcase){
-        s(n); s(m); s(p);
-
-        forall(i,0,n){
-          player p;
-          cin>>p.name;
-          cin>>p.shot;
-          cin>>p.height;
-          in.push_back(p);
-        }
-        sort(in.begin(),in.end(),comparator);
-
-        if(n == 2*p){
-          printf("\n\nCase #%d: \n",tcase);
-          return;
-        }
-        print();
+    bool printComparator(player a,player b){
+      return ( (a.name).compare(b.name) < 0 );
     }
 
-    int main(){
-        int T;
-        s(T);
-        for(int i=0;i<T;i++){
-            solve(i);
-        }
-    return 0;
+void solve(int tcase){
+    s(n); s(m); s(p);
+
+    forall(i,0,n){
+      player p;
+      cin>>p.name;
+      cin>>p.shot;
+      cin>>p.height;
+      in.push_back(p);
     }
+    sort(in.begin(),in.end(),comparator);
+
+    forall(i,0,n){
+      if(i%2)
+        t1.push_back(in[i]);
+      else
+        t2.push_back(in[i]);
+    }
+
+forall(i,0,m){
+
+}
+
+
+    if(n == 2*p){
+      printf("\n\nCase #%d: \n",tcase);
+      return;
+    }
+    print();
+}
+
+int main(){
+    int T;
+    s(T);
+    for(int i=0;i<T;i++){
+        solve(i);
+    }
+return 0;
+}

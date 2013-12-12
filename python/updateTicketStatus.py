@@ -17,12 +17,12 @@ def is_valid_pnr(s):
 with open(filePath, 'rU' ) 	as 	csvfile:
 	data = csv.reader(csvfile ,skipinitialspace = True)
 	for row in data:
-		print row[0] + "  " + row[2] + " " + row[3]
+		print row[0] + "  " + row[1] + " " + row[2] + " " + row[3]
 		pnr_number =  row[0]
-		if  len(pnr_number) == 10 and is_valid_pnr(pnr_number):		
+		if  len(pnr_number) == 10 and is_valid_pnr(pnr_number):
 			values = {
 				'lccp_pnrno1' : pnr_number,
-			     	'submit' : 'Wait+For+PNR+Enquiry%21' 
+			     	'submit' : 'Wait+For+PNR+Enquiry%21'
 			     	}
 			data = urllib.urlencode(values)
 			req = urllib2.Request(url, data)
@@ -34,7 +34,7 @@ with open(filePath, 'rU' ) 	as 	csvfile:
 					pass
 				else:
 					break
-				
+
 			the_page = response.read()
 
 			list_entries = ''

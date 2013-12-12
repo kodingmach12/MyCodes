@@ -22,7 +22,7 @@ long long  generatePrimesToN(long long int n){
 
 		if(!flg)
 		{
-		  cout<<i<<endl;
+		  cout<<i<<",";
 			cnt++;
 		}
 		i++;
@@ -49,7 +49,7 @@ void generateNPrimes(long long int n)
 
 		if(!flg)
 		{
-		  cout<<i<<endl;
+		  cout<<i<<",";
 			cnt++;
 		}
 		i++;
@@ -59,10 +59,10 @@ int main()
 {
 	long long int t;
 	cin>>t;
- 	cout<<"The" <<t<<"primes are" <<endl;
+ 	// cout<<"The" <<t<<"primes are" <<endl;
 	// generateNPrimes(t);
 
-	cout<<" The primes upto " << t << " are " << endl;
+	// cout<<" The primes upto " << t << " are " << endl;
 	int k = generatePrimesToN(t);
 	cout << " total prime count is "<< k << endl;
 
